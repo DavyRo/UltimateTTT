@@ -1,0 +1,88 @@
+********************
+ULTIMATE TIC TAC TOE
+********************
+Programmed by Davy Romine, 
+a student at The University of Texas at Dallas
+CS 2336.001, Fall 2022
+Professor Borazjany
+
+Rules of Ultimate Tic-Tac-Toe
+-----------------------------
+1. 	Each player takes turns adding their marks to the board.
+	The Ultimate Board is made up of 9 boards in a 3x3 formation,
+	which are each made up of 9 boxes arranged in a 3x3 formation.
+
+2. 	You may only play in the board that corresponds to the Box the
+	other player last played in. For example, if you play in Box 1
+	(top-center), your opponent's next move must be in Board 1.
+
+3. 	A player can win a Board by being the first to achieve a full
+	row, column, or diagonal with their marks within a singular Board.
+	This is exactly the same as standard Tic-Tac-Toe. 
+
+4.	If a player is sent to a Board that has already been won, they
+	must still play in that board. Furthermore, once a Board has been
+	won, it will remain won by that player (even if their opponent
+	gains a victory condition on that Board). In other words, the
+	first person to win the Board, will own that Board for the
+	entire Game.
+	
+5. 	A player can win the Game by achieving a full row, column,
+	or diagonal of won Boards on the Ultimate Board.
+6. 	If a player is sent to a Board with no available Boxes,
+	the player may choose any available Board on the Ultimate Board
+	to play in.
+
+How to Play
+-----------
+The game will begin by asking what players will be playing the game.
+Inputting 0 will run a game between 2 Computer-based Players.
+They will always select a random square.
+Inputting 1 will run a game between 1 Computer-based player and
+1 Human player. The human player will go second, and will be 
+assigned the 'O' mark.
+Inputting 2 will run a game between 1 Computer-based player and
+1 Human player. The human player will go first, and will be 
+assigned the 'X' mark.
+Inputting 3 will run a game between 2 Human players.
+
+After the game begins, players will be asked to select boxes
+to play in. The upper-left box is Box 0, and continues to increment
+across the rows, before going to the next. In other words, the numbers
+increment much like reading a book. The diagrams below illustrate what number
+each Box and Board are assigned.
++-------+
+| 0 1 2 |
+| 3 4 5 |  Diagram for a Box in any Board.
+| 6 7 8 |
++-------+
+
++-------+-------+-------+
+| - - - | - - - | - - - | 
+| - 0 - | - 1 - | - 2 - | 
+| - - - | - - - | - - - | 
++-------+-------+-------+
+| - - - | - - - | - - - | 
+| - 3 - | - 4 - | - 5 - | Diagram for the Ultimate Board,
+| - - - | - - - | - - - | with each Board labeled.
++-------+-------+-------+
+| - - - | - - - | - - - | 
+| - 6 - | - 7 - | - 8 - | 
+| - - - | - - - | - - - | 
++-------+-------+-------+
+
+Analysis and Design
+--------
+Ultimate Tic Tac Toe is just a larger version of Tic-Tac-Toe. As such,
+the UltimateBoard is simply constructed from 9 Boards. There are also methods
+for checking the UltimateBoard for victory, a new datafield in each Board that
+lists the winner of that Board, and a more complex printing method that prints
+each line one at a time.
+
+The game can be played in AI vs AI, AI vs Human, and Human vs Human modes.
+I was not able to implement the extra credit winning strategy for the AI,
+however, I did implement the extra credit method to print the available
+Boxes playable on any given turn.
+
+The game works. It will crash, however, if a char or non-int is input. As long as
+the inputs are ints, however, the code will run without error.
