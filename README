@@ -50,7 +50,8 @@ After the game begins, players will be asked to select boxes
 to play in. The upper-left box is Box 0, and continues to increment
 across the rows, before going to the next. In other words, the numbers
 increment much like reading a book. The diagrams below illustrate what number
-each Box and Board are assigned.
+each Box and Board are assigned. The game will output all available moves
+within the active Board being played on.
 +-------+
 | 0 1 2 |
 | 3 4 5 |  Diagram for a Box in any Board.
